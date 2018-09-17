@@ -169,7 +169,7 @@ class: center, middle
 or: what is *-omics*?
 
 ---
-class: center, middle
+class: left, middle
 
 ## DNA as the blueprint of life
 
@@ -184,17 +184,19 @@ class: center, middle
 - LD, gummy bears
 
 ---
-class: center, middle
+class: left, middle
 
 ## Layers
 
 - RNA, ... 
 
+<img src="img/cascade.pdf" width="400">
+
 - basket of environment
 
 
 ---
-class: center, middle
+class: left, middle
 
 ## Why are we interesed in DNA? 
 
@@ -202,9 +204,21 @@ class: center, middle
 
 - knowing risk per person to develop a disease
 
+<img src="img/gwas_rationale.pdf" width="400">
+
+
 
 ---
-class: center, middle
+class: left, middle
+
+## How is DNA measures?
+
+<img src="img/genome.pdf" width="400">
+
+
+
+---
+class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
@@ -220,14 +234,14 @@ class: center, middle
 ## 3. GWAS (genome-wide association study)
 
 ---
-class: center, middle
+class: left, middle
 
 ## Relationship between DNA and trait/disease
 
 > Illustration
 
 ---
-class: center, middle
+class: left, middle
 
 ## Relationship between DNA and trait/disease
 
@@ -237,7 +251,7 @@ class: center, middle
 
 
 ---
-class: center, middle
+class: left, middle
 
 ## TOP SNPs in height
 
@@ -245,16 +259,20 @@ class: center, middle
 - Top player basketball
 
 ---
-class: center, middle
+class: left, middle
 
 ## Large sample sizes needed
+
+<img src="img/maf_effectsize.pdf" width="400">
+
+
 
 - Solution \#1: exploit LD and use cheap chips instead of pricy sequencing
 
 - Solution \#2: Build consortium
 
 ---
-class: center, middle
+class: left, middle
 
 ## How GWASs work 
 
@@ -265,14 +283,14 @@ class: center, middle
 - Make results public
 
 ---
-class: center, middle
+class: left, middle
 
 ## Example GWAS
 
 of a latest paper
 
 ---
-class: center, middle
+class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
@@ -288,9 +306,23 @@ class: center, middle
 
 ## 4. Missing data
 
+---
+class: left, middle
+
+## Analogy
+
 - How to infer data that is missing
 
 - Analogy: Hiking Map
+
+---
+class: left, middle
+
+## Basic principle
+
+
+<img src="img/genome_imputation.pdf" width="400">
+
 
 
 <!---- SSIMP -------->
@@ -298,6 +330,13 @@ class: center, middle
 class: center, middle
 
 ## 3. Summary statistic imputation (SSIMP)
+
+---
+class: left, middle
+
+## How SSimp works
+
+<img src="img/summarystats_comic.pdf" width="400">
 
 
 <!---------------- RESULTS --------------->
@@ -308,6 +347,7 @@ class: inverse, center, middle
 
 <!---- SSIMP - plosgen -------->
 
+rueeger-etal-2018-fp.pdf
 
 <!---------------- DISCUSSION --------------->
 

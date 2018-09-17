@@ -5,7 +5,7 @@ author: "Sina Rüeger"
 date: "21 September 2018" ##  (updated: `r Sys.Date()`)
 output:
   xaringan::moon_reader:
-    css: ["default-fonts", "default", "my-theme.css"]
+    css: ["default-fonts", "default", "theme-public-defense.css"]
     lib_dir: libs
     nature:
       highlightStyle: github

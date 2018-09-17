@@ -7,6 +7,8 @@
     <meta name="date" content="2018-09-21" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="libs/ionicons/css/ionicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="theme-public-defense.css" type="text/css" />
   </head>
   <body>
@@ -23,18 +25,272 @@ class: top, right, title-slide
 
 
 
+&lt;!------- emoji 😮----------&gt;
+&lt;!------- icons <i class="fab  fa-r-project " style="color:#88398a;"></i>----------&gt;
+&lt;!------- icons <i class="ion  ion-heart "></i> ----------&gt;
+
+
+---
+class: inverse, left, middle
+
+# Outline
+
+- Introduction (= explaining the title)
+
+- Results ( = what I did during the PhD)
+
+- Discussion (= did it work? &amp; whats now)
+
+&lt;!---------------- INTRODUCTION ---------------&gt;
+---
+class: inverse, center, middle
+
+# Introduction
+
+
+&lt;!---- Data analysis --------&gt;
+---
+class: center, middle
+
+## 1. What is data analysis?
+
+---
+class: left, middle
+
+### Example: Distribution of human height
+
+![](slides_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+
+.footnote[From https://en.wikipedia.org/wiki/List_of_average_human_height_worldwide#cite_note-Staub-134. ]
+
+
+---
+class: left, middle
+
+### Example: Distribution of human height
+
+![](slides_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+.footnote[From https://en.wikipedia.org/wiki/List_of_average_human_height_worldwide#cite_note-Staub-134. ]
+
+---
+class: left, middle
+
+### Example: Distribution of human height over time
+
+&lt;img src="img/height-overtime.png" width="400"&gt;
+
+.small[Evolution of the average height (cm) of 19-year-old Swiss conscripts from 1878–79 to 2009 (1992–2009: individual data, before 1992: published averages). ]
+
+.footnote[From https://smw.ch/article/doi/smw.2011.13238. ]
+
+
+---
+class: left, middle
+
+### Example: Relationship of bodysize and brain
+
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Brain-body_mass_ratio_for_some_animals_diagram.svg/1200px-Brain-body_mass_ratio_for_some_animals_diagram.svg.png" width="400"&gt;
+
+.small[Brain–body mass ratio relationship for mammals. ]
+
+.footnote[From https://en.wikipedia.org/wiki/Brain-to-body_mass_ratio. ]
+
+---
+class: left, middle
+
+## What is the purpose of data analysis?
+
+1. <i class="fas  fa-caret-down "></i> Distill knowledge from data: *Average height in Swiss women in 2017.*
+
+1. <i class="fas  fa-chart-line "></i> quantify relationships: *Evolution of human height over time, relationship between height and ..* 
+
+1. Statistical methods / tools help us to understand the world (= complex systems) we life in 
+
+1. How it works: have a question, collect data, answer the question, limited to the data. 
+
+---
+class: left, middle
+
+## Other examples of data analysis usage
+
+- e.g. prediction of temperature rise
+- score for born baby (Apgar score)
+- e.g. score for disease: diagnosis
+
+
+
+---
+class: left, middle
+
+## Central principles of data analysis
+
+- Data that we have is often time a proxy for something we would like to measure, but cannot (*for example: we use BMI as a proxy for obesity*)
+
+- The more data we have, the *more precise* we can quantify something (= sqrt(N) correlates with standard error)
+
+- Some things are more difficult to measure than other things
+  - a relationship between X and Y is easier to quantify than showing that X is causing Y: * Correlation != Cause*.
+  - it is impossible to *prove* something, but we can give evidence that something is more likely: *= Hypothesis testing*.
+
+---
+class: left, middle
+
+## Take away <i class="fas  fa-hand-pointer "></i>
+
+- Linear regression
+- Sample size
+
+&lt;!---- Biology --------&gt;
 
 ---
 class: center, middle
 
-# xaringan
+## 2. Bits of biology 
 
-sdfsdfsdf
+What is *-omics*.
+
+
+
+
+&lt;!---- GWAS  --------&gt;
+&lt;!--- combine DA and biology --------&gt;
+---
+class: center, middle
+
+## 3. GWAS (genome-wide association study)
+
+---
+class: center, middle
+
+## Relationship between DNA and trait/disease
+
+&gt; Illustration
+
+---
+class: center, middle
+
+## Relationship between DNA and trait/disease
+
+&gt; Illustration of 1 SNP
+
+&gt; Manhatten plot
+
+
+---
+class: center, middle
+
+## TOP SNPs in height
+
+- Increase height by... cm
+- Top player basketball
+
+---
+class: center, middle
+
+## Large sample sizes needed
+
+- Solution \#1: exploit LD and use cheap chips instead of pricy sequencing
+
+- Solution \#2: Build consortium
+
+---
+class: center, middle
+
+## How GWASs work 
+
+- Large sample sizes needed &gt; consortium
+
+- Meta analsysis
+
+- Make results public
+
+---
+class: center, middle
+
+## Example GWAS
+
+of a latest paper
+
+---
+class: center, middle
+
+## Take away:
+
+- Large sample sizes required: consortium!
+
+- Recycling GWAS summary stats for other methods
+
+
+
+&lt;!---- Missing data --------&gt;
+---
+class: center, middle
+
+## 4. Missing data
+
+- How to infer data that is missing
+
+- Analogy: Hiking Map
+
+
+&lt;!---- SSIMP --------&gt;
+---
+class: center, middle
+
+## 3. Summary statistic imputation (SSIMP)
+
+
+&lt;!---------------- RESULTS ---------------&gt;
+---
+class: inverse, center, middle
+
+# Results
+
+&lt;!---- SSIMP - plosgen --------&gt;
+
+
+&lt;!---------------- DISCUSSION ---------------&gt;
 
 ---
 class: inverse, center, middle
 
-# Get Started
+# Discussion
+
+---
+class: left, middle
+
+## My contribution
+
+With my work on summary statistic imputation I have helped to im- prove linking incomplete GWAS summary statistics with follow-up methods.
+
+- SSIMP: Bridging GWAS summary statistics with follow up methods
+- Improving SSIMP (improved imputation quality and optimised assembly of the LD matrix)
+- Quantified how well SSIMP works (compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the util- ity of summary statistic imputation). 
+
+
+---
+class: left, middle
+
+## What needs to be improved for SSIMP
+
+- LD matrix estimation
+- how to incorporate SSIMP into cohort pipeline
+- maintaining software
+
+
+---
+class: left, middle
+
+## What is needed for GWASs
+
+Foundation of SSIMP 
+
+- Quality of GWAS
+- More -omics data / deep phenotyinging
+- Mutliethnic GWASs
+- Public data: 
+- Large &amp; diverse reference panels
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>

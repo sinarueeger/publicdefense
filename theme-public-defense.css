@@ -29,7 +29,7 @@ body {
   background-size: cover;
 }
 
-.title-slide h1, h2, h3 {
+.title-slide h1, .title-slide h2, .title-slide h3 {
   color: #ffffff;
 }
 

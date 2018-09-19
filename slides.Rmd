@@ -31,6 +31,7 @@ knitr::opts_chunk$set(
 <!------- icons `r icon::fa_r_project(colour = "#88398a")`---------->
 <!------- icons `r icon::ii_heart()` ---------->
 
+CORNERSTONES OF MEDICINE
 
 ---
 class: inverse, left, middle
@@ -39,9 +40,10 @@ class: inverse, left, middle
 
 - Introduction (= explaining the title)
 
-- Results ( = what I did during the PhD)
+- Results (= what I did during the PhD)
 
-- Discussion (= did it work? & whats now)
+- Discussion (= did it work? & outlook)
+
 
 <!---------------- INTRODUCTION --------------->
 ---
@@ -54,7 +56,7 @@ class: inverse, center, middle
 ---
 class: center, middle
 
-## 1. What is data analysis?
+## 1. What is "data analysis" and "statistics"?
 
 ---
 class: left, middle
@@ -96,23 +98,23 @@ class: left, middle
 
 ### Example: Distribution of human height over time
 
-<img src="img/height-overtime.png" width="400">
+<!--- <img src="img/age-ldl.png" width="400"> -------->
 
-.small[Evolution of the average height (cm) of 19-year-old Swiss conscripts from 1878–79 to 2009 (1992–2009: individual data, before 1992: published averages). ]
+.small[Age vs. LDL ]
 
-.footnote[From https://smw.ch/article/doi/smw.2011.13238. ]
+.footnote[From .... ]
 
 
 ---
 class: left, middle
 
-### Example: Relationship of bodysize and brain
+### Example: Patterns
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Brain-body_mass_ratio_for_some_animals_diagram.svg/1200px-Brain-body_mass_ratio_for_some_animals_diagram.svg.png" width="400">
+<!--------- <img src="europeans.png" width="400"> ------------>
 
-.small[Brain–body mass ratio relationship for mammals. ]
+.small[Europeans. ]
 
-.footnote[From https://en.wikipedia.org/wiki/Brain-to-body_mass_ratio. ]
+.footnote[From .... ]
 
 ---
 class: left, middle
@@ -182,6 +184,8 @@ class: left, middle
 - SNPs of famuous ppl
 
 - LD, gummy bears
+
+- complex traits: many genes are affecting... 
 
 ---
 class: left, middle
@@ -324,6 +328,8 @@ class: left, middle
 <img src="img/genome_imputation.pdf" width="400">
 
 
+Reference panel html
+
 
 <!---- SSIMP -------->
 ---
@@ -345,9 +351,43 @@ class: inverse, center, middle
 
 # Results
 
-<!---- SSIMP - plosgen -------->
+---
+class: left, middle
+# Evaluation of SSIMP
 
-rueeger-etal-2018-fp.pdf
+<img src="img/rueeger-etal-2018-fp.pdf" width="400">
+
+---
+class: left, middle
+
+## Two goals
+
+1) Compare summary statistic imputation to genotype imputation
+
+(2) Test the utility of summary statistic imputation on a real case on human height.
+
+
+---
+class: left, middle
+
+## Blind resutls!
+
+---
+class: left, middle
+
+## 1) 
+F1
+F4/F5
+
+---
+class: left, middle
+
+## 2) 
+F2
+Fig8
+S6_Fig
+S8_Fig
+
 
 <!---------------- DISCUSSION --------------->
 
@@ -356,16 +396,6 @@ class: inverse, center, middle
 
 # Discussion
 
----
-class: left, middle
-
-## My contribution
-
-With my work on summary statistic imputation I have helped to im- prove linking incomplete GWAS summary statistics with follow-up methods.
-
-- SSIMP: Bridging GWAS summary statistics with follow up methods
-- Improving SSIMP (improved imputation quality and optimised assembly of the LD matrix)
-- Quantified how well SSIMP works (compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the util- ity of summary statistic imputation). 
 
 
 ---
@@ -373,9 +403,11 @@ class: left, middle
 
 ## What needs to be improved for SSIMP
 
-- LD matrix estimation
-- how to incorporate SSIMP into cohort pipeline
-- maintaining software
+To impute summary statistics the following is needed
+- large and diverse reference panels >> improvement of LD matrix estimation.
+- software/tools >> easy to use and maintained
+- publicly available GWAS data >> the input of SSIMP
+- figure out how to incorporate SSIMP into cohort pipeline
 
 
 ---
@@ -390,3 +422,16 @@ Foundation of SSIMP
 - Mutliethnic GWASs
 - Public data: 
 - Large & diverse reference panels
+
+
+---
+class: left, middle
+
+## My contribution
+
+With my work on summary statistic imputation I have helped to improve linking incomplete GWAS summary statistics with follow-up methods.
+
+- SSIMP: Bridging incomplete GWAS summary statistics with follow up methods (For example: Multi-trait analyses (genetic correlation, pleiotropy))
+- Improving SSIMP (improved imputation quality and optimised assembly of the LD matrix)
+- Quantified how well SSIMP works (compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the util- ity of summary statistic imputation). 
+

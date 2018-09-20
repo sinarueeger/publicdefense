@@ -121,57 +121,13 @@ class: left, middle
 
 .small[From: Freedman et al. (2004)]
 
-<img src="img/age_LDL.png" width="200"> <!----- <img src="img/age_HDL.png" width="200"> ------->
+<img src="img/age_LDL.png" width="200"> 
 
 
-<!----------
-
----
-class: left, middle
-
-### Identifying patterns
-
-#### Example: Genes mirror geography within Europe
-
-<img src="img/european-map.png" width="300">
-
-.small[From: Novembre et al. (2008)]
-
----
-class: left, middle
-
-### Medical scores to assess patients
-
-#### Example: APGAR score
-
-Test done in newborns 1-5 minutes after birth. 
-
-1. Skin color
-2. Pulse rate
-3. Reflex
-4. Activity
-5. Respiratory
-
-<img src="img/title-apgar.png" width="400">
-
-.small[From: Apgar (1953)]
-
---------->
 ---
 class: left, middle
 
 ## What is the purpose of statistical methods? `r icon::fa_chart_line()`
-<!---------
-1. By summarising data we can `r icon::fa_caret_down()` distill knowledge.
-
-1. Helps us to understand the world and the complex systems we life in.
-
-1. How data analysis works: 
-    - identify a problem
-    - define a question
-    - collect data
-    - answer the question (limited to the data used)
------->
 
 ---
 class: left, middle
@@ -182,8 +138,6 @@ class: left, middle
 
 - The more data records we have, the **more precise** the estimation (of interest) `r icon::fa_arrow_right()` *Relationship between sample size and the standard error*.
 
-<!--- - Some questions are harder to answer than others: a **relationship between X and Y** is easier to quantify than showing that X is causing Y `r icon::fa_arrow_right()` * Correlation ≠ Causation*.
-  - it is **impossible to prove** a hypothesis, but we can reject a hypothesis `r icon::fa_arrow_right()` *aka hypothesis testing*. -------->
 
 ---
 class: left, middle
@@ -207,11 +161,16 @@ or: what is *-omics*?
 class: left, middle
 
 ## DNA 
-
+.pull-left[
 - is the blueprint of (human) life
 
 - consists of nucleotides A, C, G and T 
+]
 
+.pull-right[
+<img src="img/genes-DNA.jpg" width="800">
+.small[Source: https://www.thoughtco.com/genetics-basics-373285]
+]
 ---
 class: left, middle
 
@@ -220,12 +179,6 @@ class: left, middle
 
 <img src="img/cascade.png" width="800">
 
-<!--- 
-- many genes
-- basket of environment
-- Dissecting the role of genetic and environmental effects. 
-
---->
 
 ---
 class: left, middle
@@ -256,7 +209,6 @@ class: left, middle
 Parts of the **genome tend to be inherited together**, which creates sets of correlated SNPs in close proximity (‘in linkage disequilibrium (LD)’).
 
 ]
-<!---------  ------>
 
 
 
@@ -360,7 +312,7 @@ class: left, middle
 ## Consortium of cohorts around the world
 
 <img src="img/consortium.png" width="700">
-<!---------
+
 ---
 class: left, middle
 
@@ -370,14 +322,13 @@ class: left, middle
 
 - 44 novel loci associated with major depression disorder (MDD)
 
-- a meta-analysis of GWAS summary statistics from $135'458$ cases and $344'901$ from six cohorts. 
+- a meta-analysis of GWAS summary statistics from 135'458 cases and 344'901 controls from six cohorts. 
 
-Resulting summary statistic 
-- was integrated with gene expression data to identify the somatic tissues involved in MDD
-- used to estimate heritability explained by the new findings
+Resulting summary statistic was used:
+- to identify the somatic tissues involved in MDD
+- to estimate heritability explained by the new findings
 - to identify biological pathways relevant to MDD
 - to investigate the relationships with genetically correlated traits
------>
 
 ---
 class: left, middle
@@ -419,14 +370,7 @@ class: left, middle
 
 <img src="img/genome_imputation.png" width="600">
 
-<!---------
----
-class: left, middle
 
-## Public reference panel
-
-<img src="img/map-1000genomes-populations.png" width="600">
------------>
 
 <!---- SSIMP -------->
 ---

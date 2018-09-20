@@ -306,12 +306,6 @@ class: left, middle
 - Solution \#2: Form a consortium
 ]
 
----
-class: left, middle
-
-## Consortium of cohorts around the world
-
-<img src="img/consortium.png" width="700">
 
 ---
 class: left, middle
@@ -465,15 +459,6 @@ class: left, middle
 1. **Test** the utility of summary statistic imputation on a real case on human height data.
 
 
----
-class: left, middle
-
-# How to test new imputation methods
---
-
-.pull-left[
-.big[`r emo::ji("see_no_evil")`]
-]
 
 ---
 class: left, middle
@@ -510,16 +495,6 @@ class: left, middle
 <img src="img/results-exome-locuszoom.png" width="500">
 
 
-<!---------
----
-class: left, middle
-
-
-## Comparing imputation results to exome results
-
-<img src="img/results-exome-hits.png" width="800">
---------->
-
 <!---------------- DISCUSSION --------------->
 
 ---
@@ -544,7 +519,7 @@ icon.world <- purrr::map_chr(RColorBrewer::brewer.pal(5, "Set1"), ~icon::fa_glob
 
 - to improve of LD matrix estimation
 - to impute low-frequency variants 
-- to impute cosmopolitan/mutliethnic GWASs
+- to impute cosmopolitan/multi-ethnic GWASs
 
 ### `r icon::fa_wrench(color = "gray")` Software & tooling 
 

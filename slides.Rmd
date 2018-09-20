@@ -161,7 +161,7 @@ Test done in newborns 1-5 minutes after birth.
 class: left, middle
 
 ## What is the purpose of statistical methods? `r icon::fa_chart_line()`
-
+<!---------
 1. By summarising data we can `r icon::fa_caret_down()` distill knowledge.
 
 1. Helps us to understand the world and the complex systems we life in.
@@ -171,7 +171,7 @@ class: left, middle
     - define a question
     - collect data
     - answer the question (limited to the data used)
-
+------>
 
 ---
 class: left, middle
@@ -182,9 +182,8 @@ class: left, middle
 
 - The more data records we have, the **more precise** the estimation (of interest) `r icon::fa_arrow_right()` *Relationship between sample size and the standard error*.
 
-- Some questions are harder to answer than others: 
-  - a **relationship between X and Y** is easier to quantify than showing that X is causing Y `r icon::fa_arrow_right()` * Correlation ≠ Causation*.
-  - it is **impossible to prove** a hypothesis, but we can reject a hypothesis `r icon::fa_arrow_right()` *aka hypothesis testing*.
+<!--- - Some questions are harder to answer than others: a **relationship between X and Y** is easier to quantify than showing that X is causing Y `r icon::fa_arrow_right()` * Correlation ≠ Causation*.
+  - it is **impossible to prove** a hypothesis, but we can reject a hypothesis `r icon::fa_arrow_right()` *aka hypothesis testing*. -------->
 
 ---
 class: left, middle
@@ -278,7 +277,7 @@ class: left, middle
 - DNA cannot be (easily) altered
 - We are only interested in the varying part of the genome `r icon::fa_arrow_right()` SNPs
 - Parts of the genome are inherited together `r icon::fa_arrow_right()` LD
-s
+
 <!---- GWAS  -------->
 <!--- combine DA and biology -------->
 ---
@@ -364,9 +363,19 @@ class: left, middle
 ---
 class: left, middle
 
-## Example GWAS
+## Example: GWAS in MDD
 
-of a latest paper
+- Wray et al. (2018)
+
+- 44 novel loci associated with major depression disorder (MDD)
+
+- a meta-analysis of GWAS summary statistics from $135'458$ cases and $344'901$ from six cohorts. 
+
+Resulting summary statistic 
+- was integrated with gene expression data to identify the somatic tissues involved in MDD
+- used to estimate heritability explained by the new findings
+- to identify biological pathways relevant to MDD
+- to investigate the relationships with genetically correlated traits
 
 ---
 class: left, middle

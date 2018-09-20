@@ -124,6 +124,7 @@ class: left, middle
 <img src="img/age_LDL.png" width="200"> <!----- <img src="img/age_HDL.png" width="200"> ------->
 
 
+<!----------
 
 ---
 class: left, middle
@@ -135,7 +136,6 @@ class: left, middle
 <img src="img/european-map.png" width="300">
 
 .small[From: Novembre et al. (2008)]
-
 
 ---
 class: left, middle
@@ -156,7 +156,7 @@ Test done in newborns 1-5 minutes after birth.
 
 .small[From: Apgar (1953)]
 
-
+--------->
 ---
 class: left, middle
 
@@ -215,6 +215,21 @@ class: left, middle
 ---
 class: left, middle
 
+## Biological cascade
+
+
+<img src="img/cascade.png" width="800">
+
+<!--- 
+- many genes
+- basket of environment
+- Dissecting the role of genetic and environmental effects. 
+
+--->
+
+---
+class: left, middle
+
 ## SNP (Single Nucleotide Polymorphism)
 
 <img src="img/snps-001.png" width="600">
@@ -243,20 +258,6 @@ Parts of the **genome tend to be inherited together**, which creates sets of cor
 ]
 <!---------  ------>
 
----
-class: left, middle
-
-## Biological cascade
-
-
-<img src="img/cascade.png" width="800">
-
-<!--- 
-- many genes
-- basket of environment
---->
-
-<!----- - Dissecting the role of genetic and environmental effects. -------->
 
 
 

@@ -257,9 +257,9 @@ class: left, middle
 
 ## Keep in mind <i class="fas  fa-hand-pointer "></i>
 
-- DNA cannot be (easily) altered
 - We are only interested in the varying part of the genome <i class="fas  fa-arrow-right "></i> SNPs
-- Parts of the genome are inherited together <i class="fas  fa-arrow-right "></i> LD
+
+- Parts of the genome are correlated <i class="fas  fa-arrow-right "></i> LD
 
 &lt;!---- GWAS  --------&gt;
 &lt;!--- combine DA and biology --------&gt;
@@ -323,7 +323,7 @@ class: left, middle
 ## Consortium of cohorts around the world
 
 &lt;img src="img/consortium.png" width="700"&gt;
-
+&lt;!---------
 ---
 class: left, middle
 
@@ -340,6 +340,7 @@ Resulting summary statistic
 - used to estimate heritability explained by the new findings
 - to identify biological pathways relevant to MDD
 - to investigate the relationships with genetically correlated traits
+-----&gt;
 
 ---
 class: left, middle
@@ -381,20 +382,20 @@ class: left, middle
 
 &lt;img src="img/genome_imputation.png" width="600"&gt;
 
-
+&lt;!---------
 ---
 class: left, middle
 
 ## Public reference panel
 
 &lt;img src="img/map-1000genomes-populations.png" width="600"&gt;
-
+-----------&gt;
 
 &lt;!---- SSIMP --------&gt;
 ---
 class: center, middle
 
-## 3. Summary statistic imputation (SSIMP)
+## 5. Summary statistic imputation (SSIMP)
 
 ---
 class: left, middle
@@ -461,7 +462,7 @@ class: left, middle
     - &lt;small&gt;*Bayesian association scan reveals loci associated with human lifespan and linked biomarkers* (McDaid et al. 2017)&lt;/small&gt;
 
 1. Contributions to research in infectious diseases
-    - &lt;small&gt;*Impact of com- mon risk factors of fibrosis progression in chronic hepatitis C* (Rüeger et al. 2015)&lt;/small&gt;
+    - &lt;small&gt;*Impact of common risk factors of fibrosis progression in chronic hepatitis C* (Rüeger et al. 2015)&lt;/small&gt;
     - ...
 
 1. Minor contributions to other publications
@@ -486,25 +487,17 @@ class: left, middle
 ---
 class: left, middle
 
-# How to test new methods
+# How to test new imputation methods
 --
 
 .pull-left[
 .big[🙈]
 ]
 
-.pull-right[
-1. Pretend to not have seen recent results for new set of markers (obtained through sequencing, genotyping or genotype imputation).  
-
-1. Apply SSIMP.
-
-1. Compare SSIMP-results to results by traditional methods. 
-]
-
 ---
 class: left, middle
 
-# 2. Compare SSIMP to genotype imputation
+# 1. Compare SSIMP to genotype imputation
 
 &lt;img src="img/results-ukbb-schema.png" width="600"&gt;
 
@@ -522,7 +515,7 @@ class: left, middle
 ---
 class: left, middle
 
-# 3. Test SSIMP on height GWAS
+# 2. Test SSIMP on height GWAS
 
 &lt;img src="img/results-exome-schema.png" width="600"&gt;
 
@@ -536,6 +529,7 @@ class: left, middle
 &lt;img src="img/results-exome-locuszoom.png" width="500"&gt;
 
 
+&lt;!---------
 ---
 class: left, middle
 
@@ -543,7 +537,7 @@ class: left, middle
 ## Comparing imputation results to exome results
 
 &lt;img src="img/results-exome-hits.png" width="800"&gt;
-
+---------&gt;
 
 &lt;!---------------- DISCUSSION ---------------&gt;
 
@@ -587,10 +581,11 @@ class: left, middle
 
 With my work on summary statistic imputation I have helped to **link incomplete GWAS** summary statistics with **follow-up methods** (such as multi-trait analyses).
 
-
+&lt;!---------
 - **Improved SSIMP**: .small[improved imputation quality and optimised assembly of the LD matrix.]
 
 - Quantified **performance &amp; utility of SSIMP**: .small[compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the utility of summary statistic imputation.] 
+-----&gt;
 
 ---
 class: inverse, center, middle

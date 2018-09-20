@@ -82,7 +82,7 @@ class: left, middle
 
 #### Example: Distribution of human height in 100 individuals
 
-```{r, fig.width = 6, fig.height = 3, dev = "pdf"}
+```{r, fig.width = 6, fig.height = 3}
 
 set.seed(3)
 height <- rnorm(100, 164, sd = 8)

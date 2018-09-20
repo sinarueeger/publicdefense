@@ -231,12 +231,18 @@ class: left, middle
 ---
 class: left, middle
 
-## Linkage Disequilibrium (LD)
-
+.pull-left[
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Two of my favourite things put together! <a href="https://t.co/1jE0hWr0Yt">pic.twitter.com/1jE0hWr0Yt</a></p>&mdash; Mike Inouye (@minouye271) <a href="https://twitter.com/minouye271/status/993073495205527552?ref_src=twsrc%5Etfw">May 6, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+]
 
-<!--------- parts of the genome tend to be inherited together, which creates sets of correlated SNPs in close proximity (‘in linkage disequilibrium (LD)’) ------>
+.pull-right[
+## Linkage Disequilibrium (LD)
+
+Parts of the **genome tend to be inherited together**, which creates sets of correlated SNPs in close proximity (‘in linkage disequilibrium (LD)’).
+
+]
+<!---------  ------>
 
 ---
 class: left, middle
@@ -244,7 +250,7 @@ class: left, middle
 ## Biological cascade
 
 
-<img src="img/cascade.png" width="600">
+<img src="img/cascade.png" width="800">
 
 <!--- 
 - many genes

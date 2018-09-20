@@ -191,9 +191,9 @@ class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
-- Statistical methods: summarise data & quantify relationships.
+- Statistical methods: **summarise data** & quantify relationships.
 
-- Increasing sample size helps to estimate precisely. 
+- Increasing **sample size** helps to estimate precisely. 
 
 <!---- Biology -------->
 
@@ -207,51 +207,60 @@ or: what is *-omics*?
 ---
 class: left, middle
 
-## DNA is the blueprint of human life
+## DNA 
 
-- we are originally just one cell with dna from mum and dna from dad
+- is the blueprint of (human) life
 
-- DNA cnanot be changed easily
-
-- A, C, G, T: SNP
-
-- SNPs of famuous ppl
-
-- LD, gummy bears
-
-- complex traits: many genes are affecting... 
+- consists of nucleotides A, C, G and T 
 
 ---
 class: left, middle
 
-## Layers
+## SNP (Single Nucleotide Polymorphism)
 
-- RNA, ... 
+<img src="img/snps-001.png" width="600">
 
-<img src="img/cascade.png" width="400">
+---
+class: left, middle
 
+## SNP (Single Nucleotide Polymorphism)
+
+<img src="img/snps-002.png" width="600">
+
+
+---
+class: left, middle
+
+## Linkage Disequilibrium (LD)
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Two of my favourite things put together! <a href="https://t.co/1jE0hWr0Yt">pic.twitter.com/1jE0hWr0Yt</a></p>&mdash; Mike Inouye (@minouye271) <a href="https://twitter.com/minouye271/status/993073495205527552?ref_src=twsrc%5Etfw">May 6, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!--------- parts of the genome tend to be inherited together, which creates sets of correlated SNPs in close proximity (‘in linkage disequilibrium (LD)’) ------>
+
+---
+class: left, middle
+
+## Biological cascade
+
+
+<img src="img/cascade.png" width="600">
+
+<!--- 
+- many genes
 - basket of environment
+--->
 
-
----
-class: left, middle
-
-## Why are we interesed in DNA? 
-
-- disecting genetic from environmental effects
-
-- knowing risk per person to develop a disease
-
-<img src="img/gwas_rationale.png" width="400">
+<!----- - Dissecting the role of genetic and environmental effects. -------->
 
 
 
 ---
 class: left, middle
 
-## How is DNA measures?
+## How is DNA measured
 
-<img src="img/genome.png" width="400">
+<img src="img/genome.png" width="700">
 
 
 
@@ -261,9 +270,9 @@ class: left, middle
 ## Keep in mind `r icon::fa_hand_pointer()`
 
 - DNA cannot be changed
-- LD
-- SNP
-
+- We are only interested in the varying part of the genome `r icon::fa_arrow_right()` SNPs
+- Parts of the genome are inherited together `r icon::fa_arrow_right()` LD
+s
 <!---- GWAS  -------->
 <!--- combine DA and biology -------->
 ---
@@ -276,14 +285,16 @@ class: left, middle
 
 ## Relationship between a genotype and trait/disease
 
-```{r, fig.width = 6, fig.height = 6, dev="pdf"}
+```{r, fig.width = 5, fig.height = 5, dev="pdf"}
 
 set.seed(3)
-gt.0 <- 100
-gt.1 <- 100
-gt.2 <- 100
+N <- 300
+gt.0 <- N * 0.11864407
+gt.1 <- N *	0.66101694
+gt.2 <- N * 0.22033899	
+
 A <- 50 ##intercept
-B <- 2  ## slope
+B <- -3  ## slope
 dat <- data.frame(genotype = c(rep(0, gt.0), rep(1, gt.1), rep(2, gt.2)))
 dat$disease <- A + dat$genotype * B + rnorm(nrow(dat))
 
@@ -296,9 +307,9 @@ class: left, middle
 
 ## Relationship between a genotype and trait/disease
 
-```{r, fig.width = 6, fig.height = 6, dev="pdf"}
+```{r, fig.width = 5, fig.height = 5, dev="pdf"}
 
-ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(aes(x = genotype, y = disease, group = genotype)) + geom_abline(aes(intercept = A, slope = B), color = I("red"))
+ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(aes(x = genotype, y = disease, group = genotype)) + geom_abline(aes(intercept = A, slope = B), size = I(3), color = I("green"))
 
 ```
 
@@ -318,31 +329,31 @@ class: left, middle
 ---
 class: left, middle
 
-## TOP SNPs in height
+## GWAS summary statistics
 
-- Increase height by... cm
-- Top player basketball
+<img src="img/gwas-ss.png" width="400">
 
 ---
 class: left, middle
 
 ## Large sample sizes needed
 
+.pull-left[
 <img src="img/maf_effectsize.png" width="400">
+]
 
+.pull-right[
+- Solution \#1: Exploit genetic correlation and use chips (cheap) instead of sequencing (expensive)
 
-
-- Solution \#1: exploit LD and use cheap chips instead of pricy sequencing
-
-- Solution \#2: Build consortium
-
+- Solution \#2: Form a consortium
+]
 
 ---
 class: left, middle
 
-## GWAS summary statistics
+## Consortium of cohorts around the world
 
-<img src="img/gwas-ss.png" width="400">
+<img src="img/consortium.png" width="700">
 
 ---
 class: left, middle
@@ -356,9 +367,9 @@ class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
-- Large sample sizes needed: consortium!
+- Large sample sizes needed: **consortium**!
 
-- Recycling GWAS summary statistics with other methods. 
+- Use of GWAS summary statistics with **follow-up methods**.  
 
 
 
@@ -486,17 +497,17 @@ class: left, middle
 
 # Goals
 
-1. Improve imputation quality & investigate parameters of SSIMP.
+1. **Improve** imputation quality & investigate parameters of SSIMP.
 
-1. Compare summary statistic imputation to genotype imputation.
+1. **Compare** summary statistic imputation to genotype imputation.
 
-1. Test the utility of summary statistic imputation on a real case on human height data.
+1. **Test** the utility of summary statistic imputation on a real case on human height data.
 
 
 ---
 class: left, middle
 
-# How to test new methods?
+# How to test new methods
 --
 
 .pull-left[
@@ -602,7 +613,7 @@ With my work on summary statistic imputation I have helped to **link incomplete 
 
 - **Improved SSIMP**: .small[improved imputation quality and optimised assembly of the LD matrix.]
 
-- Quantified **performance of SSIMP**: .small[compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the utility of summary statistic imputation.] 
+- Quantified **performance & utility of SSIMP**: .small[compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the utility of summary statistic imputation.] 
 
 ---
 class: inverse, center, middle

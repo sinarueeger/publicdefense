@@ -80,7 +80,7 @@ class: left, middle
 
 #### Example: Distribution of human height in 100 individuals
 
-![](slides_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+![](slides_files/figure-html/unnamed-chunk-1-1.pdf)&lt;!-- --&gt;
 
 
 
@@ -173,9 +173,9 @@ class: left, middle
 
 ## Keep in mind <i class="fas  fa-hand-pointer "></i>
 
-- Statistical methods: summarise data &amp; quantify relationships.
+- Statistical methods: **summarise data** &amp; quantify relationships.
 
-- Increasing sample size helps to estimate precisely. 
+- Increasing **sample size** helps to estimate precisely. 
 
 &lt;!---- Biology --------&gt;
 
@@ -189,51 +189,60 @@ or: what is *-omics*?
 ---
 class: left, middle
 
-## DNA is the blueprint of human life
+## DNA 
 
-- we are originally just one cell with dna from mum and dna from dad
+- is the blueprint of (human) life
 
-- DNA cnanot be changed easily
-
-- A, C, G, T: SNP
-
-- SNPs of famuous ppl
-
-- LD, gummy bears
-
-- complex traits: many genes are affecting... 
+- consists of nucleotides A, C, G and T 
 
 ---
 class: left, middle
 
-## Layers
+## SNP (Single Nucleotide Polymorphism)
 
-- RNA, ... 
+&lt;img src="img/snps-001.png" width="600"&gt;
 
-&lt;img src="img/cascade.png" width="400"&gt;
+---
+class: left, middle
 
+## SNP (Single Nucleotide Polymorphism)
+
+&lt;img src="img/snps-002.png" width="600"&gt;
+
+
+---
+class: left, middle
+
+## Linkage Disequilibrium (LD)
+
+&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Two of my favourite things put together! &lt;a href="https://t.co/1jE0hWr0Yt"&gt;pic.twitter.com/1jE0hWr0Yt&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mike Inouye (@minouye271) &lt;a href="https://twitter.com/minouye271/status/993073495205527552?ref_src=twsrc%5Etfw"&gt;May 6, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;!--------- parts of the genome tend to be inherited together, which creates sets of correlated SNPs in close proximity (‘in linkage disequilibrium (LD)’) ------&gt;
+
+---
+class: left, middle
+
+## Biological cascade
+
+
+&lt;img src="img/cascade.png" width="600"&gt;
+
+&lt;!--- 
+- many genes
 - basket of environment
+---&gt;
 
-
----
-class: left, middle
-
-## Why are we interesed in DNA? 
-
-- disecting genetic from environmental effects
-
-- knowing risk per person to develop a disease
-
-&lt;img src="img/gwas_rationale.png" width="400"&gt;
+&lt;!----- - Dissecting the role of genetic and environmental effects. --------&gt;
 
 
 
 ---
 class: left, middle
 
-## How is DNA measures?
+## How is DNA measured
 
-&lt;img src="img/genome.png" width="400"&gt;
+&lt;img src="img/genome.png" width="700"&gt;
 
 
 
@@ -243,9 +252,9 @@ class: left, middle
 ## Keep in mind <i class="fas  fa-hand-pointer "></i>
 
 - DNA cannot be changed
-- LD
-- SNP
-
+- We are only interested in the varying part of the genome <i class="fas  fa-arrow-right "></i> SNPs
+- Parts of the genome are inherited together <i class="fas  fa-arrow-right "></i> LD
+s
 &lt;!---- GWAS  --------&gt;
 &lt;!--- combine DA and biology --------&gt;
 ---
@@ -283,31 +292,31 @@ class: left, middle
 ---
 class: left, middle
 
-## TOP SNPs in height
+## GWAS summary statistics
 
-- Increase height by... cm
-- Top player basketball
+&lt;img src="img/gwas-ss.png" width="400"&gt;
 
 ---
 class: left, middle
 
 ## Large sample sizes needed
 
+.pull-left[
 &lt;img src="img/maf_effectsize.png" width="400"&gt;
+]
 
+.pull-right[
+- Solution \#1: Exploit genetic correlation and use chips (cheap) instead of sequencing (expensive)
 
-
-- Solution \#1: exploit LD and use cheap chips instead of pricy sequencing
-
-- Solution \#2: Build consortium
-
+- Solution \#2: Form a consortium
+]
 
 ---
 class: left, middle
 
-## GWAS summary statistics
+## Consortium of cohorts around the world
 
-&lt;img src="img/gwas-ss.png" width="400"&gt;
+&lt;img src="img/consortium.png" width="700"&gt;
 
 ---
 class: left, middle
@@ -321,9 +330,9 @@ class: left, middle
 
 ## Keep in mind <i class="fas  fa-hand-pointer "></i>
 
-- Large sample sizes needed: consortium!
+- Large sample sizes needed: **consortium**!
 
-- Recycling GWAS summary statistics with other methods. 
+- Use of GWAS summary statistics with **follow-up methods**.  
 
 
 
@@ -451,17 +460,17 @@ class: left, middle
 
 # Goals
 
-1. Improve imputation quality &amp; investigate parameters of SSIMP.
+1. **Improve** imputation quality &amp; investigate parameters of SSIMP.
 
-1. Compare summary statistic imputation to genotype imputation.
+1. **Compare** summary statistic imputation to genotype imputation.
 
-1. Test the utility of summary statistic imputation on a real case on human height data.
+1. **Test** the utility of summary statistic imputation on a real case on human height data.
 
 
 ---
 class: left, middle
 
-# How to test new methods?
+# How to test new methods
 --
 
 .pull-left[
@@ -565,7 +574,7 @@ With my work on summary statistic imputation I have helped to **link incomplete 
 
 - **Improved SSIMP**: .small[improved imputation quality and optimised assembly of the LD matrix.]
 
-- Quantified **performance of SSIMP**: .small[compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the utility of summary statistic imputation.] 
+- Quantified **performance &amp; utility of SSIMP**: .small[compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the utility of summary statistic imputation.] 
 
 ---
 class: inverse, center, middle

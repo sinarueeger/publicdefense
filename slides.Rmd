@@ -168,7 +168,7 @@ class: left, middle
 ]
 
 .pull-right[
-<img src="img/genes-DNA.jpg" width="800">
+<img src="img/genes-DNA.png" width="800">
 .small[Source: https://www.thoughtco.com/genetics-basics-373285]
 ]
 ---

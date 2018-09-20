@@ -275,7 +275,7 @@ class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
-- DNA cannot be changed
+- DNA cannot be (easily) altered
 - We are only interested in the varying part of the genome `r icon::fa_arrow_right()` SNPs
 - Parts of the genome are inherited together `r icon::fa_arrow_right()` LD
 s

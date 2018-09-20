@@ -285,7 +285,7 @@ class: left, middle
 
 ## Relationship between a genotype and trait/disease
 
-```{r, fig.width = 5, fig.height = 5, dev="pdf"}
+```{r, fig.width = 5, fig.height = 5}
 
 set.seed(3)
 N <- 300
@@ -307,7 +307,7 @@ class: left, middle
 
 ## Relationship between a genotype and trait/disease
 
-```{r, fig.width = 5, fig.height = 5, dev="pdf"}
+```{r, fig.width = 5, fig.height = 5}
 
 ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(aes(x = genotype, y = disease, group = genotype)) + geom_abline(aes(intercept = A, slope = B), size = I(3), color = I("green"))
 

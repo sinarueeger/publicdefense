@@ -31,7 +31,17 @@ knitr::opts_chunk$set(
 <!------- icons `r icon::fa_r_project(colour = "#88398a")`---------->
 <!------- icons `r icon::ii_heart()` ---------->
 
-CORNERSTONES OF MEDICINE
+
+---
+class: inverse, left, middle
+
+# Outline
+
+- Introduction
+
+- Results
+
+- Discussion 
 
 ---
 class: inverse, left, middle
@@ -51,6 +61,13 @@ class: inverse, center, middle
 
 # Introduction
 
+---
+class: center, middle
+
+## The goal to keep in mind: Cornerstones of Medicine
+
+<img src="img/cornerstones.png" width="400">
+
 
 <!---- Data analysis -------->
 ---
@@ -61,7 +78,9 @@ class: center, middle
 ---
 class: left, middle
 
-### Example: Distribution of human height
+### Summarise data
+
+#### Example: Distribution of human height in 100 individuals
 
 ```{r, fig.width = 6, fig.height = 3}
 
@@ -69,17 +88,18 @@ set.seed(3)
 height <- rnorm(100, 164, sd = 8)
 av <- mean(height)
 dat <- data.frame(Height = height, y= 1)
-ggplot(data = NULL) + geom_point(aes(Height, y), data = dat, alpha = I(0.7)) + ggtitle("Human height.") +  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) + ylim(c(0.95, 1.05))
+ggplot(data = NULL) + geom_point(aes(Height, y), data = dat, size = I(3), shape = 1) + ggtitle("Human height.") +  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) + ylim(c(0.95, 1.05))
 
 ```
 
-.footnote[From https://en.wikipedia.org/wiki/List_of_average_human_height_worldwide#cite_note-Staub-134. ]
 
 
 ---
 class: left, middle
 
-### Example: Distribution of human height
+### Summarise data
+
+#### Example: Distribution of human height in 100 individuals
 
 ```{r, fig.width = 6, fig.height = 3}
 
@@ -87,57 +107,70 @@ set.seed(3)
 height <- rnorm(100, 164, sd = 8)
 av <- mean(height)
 dat <- data.frame(Height = height, y= 1)
-ggplot(data = NULL) + geom_point(aes(Height, y), data = dat, alpha = I(0.7)) + ggtitle("Human height.") + geom_point(aes(x = av, y = 1), color = I("red"), size = I(3)) +  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) + geom_text(aes(x = av, y= 1.01, label = "Average"), color = I("red")) + ylim(c(0.95, 1.05))
+ggplot(data = NULL) + geom_point(aes(Height, y), data = dat, size = I(3), shape = 1) + ggtitle("Human height.") + geom_point(aes(x = av, y = 1), color = I("red"), size = I(3)) +  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) + geom_text(aes(x = av, y= 1.01, label = "Average"), color = I("red")) + ylim(c(0.95, 1.05))
 
 ```
 
-.footnote[From https://en.wikipedia.org/wiki/List_of_average_human_height_worldwide#cite_note-Staub-134. ]
 
 ---
 class: left, middle
 
-### Example: Distribution of human height over time
+### Identify relationships between A and B
 
-<!--- <img src="img/age-ldl.png" width="400"> -------->
+#### Example: Relationship between age, sex and LDL (low-density lipoprotein)
 
-.small[Age vs. LDL ]
+.small[From: Freedman et al. (2004)]
 
-.footnote[From .... ]
+<img src="img/age_LDL.png" width="200"> <!----- <img src="img/age_HDL.png" width="200"> ------->
+
+
+
+---
+class: left, middle
+
+### Identifying patterns
+
+#### Example: Genes mirror geography within Europe
+
+<img src="img/european-map.png" width="300">
+
+.small[From: Novembre et al. (2008)]
 
 
 ---
 class: left, middle
 
-### Example: Patterns
+### Medical scores to assess patients
 
-<!--------- <img src="europeans.png" width="400"> ------------>
+#### Example: APGAR score
 
-.small[Europeans. ]
+Test done in newborns 1-5 minutes after birth. 
 
-.footnote[From .... ]
+1. Skin color
+2. Pulse rate
+3. Reflex
+4. Activity
+5. Respiratory
 
----
-class: left, middle
+<img src="img/title-apgar.png" width="400">
 
-## What is the purpose of data analysis?
+.small[From: Apgar (1953)]
 
-1. `r icon::fa_caret_down()` Distill knowledge from data: *Average height in Swiss women in 2017.*
-
-1. `r icon::fa_chart_line()` quantify relationships: *Evolution of human height over time, relationship between height and ..* 
-
-1. Statistical methods / tools help us to understand the world (= complex systems) we life in 
-
-1. How it works: have a question, collect data, answer the question, limited to the data. 
 
 ---
 class: left, middle
 
-## Other examples of data analysis usage
+## What is the purpose of statistical methods? `r icon::fa_chart_line()`
 
-- e.g. prediction of temperature rise
-- score for born baby (Apgar score)
-- e.g. score for disease: diagnosis
+1. By summarising data we can `r icon::fa_caret_down()` distill knowledge.
 
+1. Helps us to understand the world and the complex systems we life in.
+
+1. How data analysis works: 
+    - have a problem
+    - define a question
+    - collect data
+    - answer the question (limited to the data used)
 
 
 ---
@@ -145,21 +178,21 @@ class: left, middle
 
 ## Central principles of data analysis
 
-- Data that we have is often time a proxy for something we would like to measure, but cannot (*for example: we use BMI as a proxy for obesity*)
+- Data represents oftentimes an **approximation** for something we cannot measure `r icon::fa_arrow_right()` *Use of BMI as a proxy for obesity*.
 
-- The more data we have, the *more precise* we can quantify something (= sqrt(N) correlates with standard error)
+- The more data records we have, the **more precise** we can quantify something  `r icon::fa_arrow_right()` *Relationship between sample size and the standard error*.
 
-- Some things are more difficult to measure than other things
-  - a relationship between X and Y is easier to quantify than showing that X is causing Y: * Correlation != Cause*.
-  - it is impossible to *prove* something, but we can give evidence that something is more likely: *= Hypothesis testing*.
+- Some questions are harder to answer than others: 
+  - a **relationship between X and Y** is easier to quantify than showing that X is causing Y `r icon::fa_arrow_right()` * Correlation ≠ Causation*.
+  - it is **impossible to prove** something, but we can give evidence that something is more likely `r icon::fa_arrow_right()` *aka. Hypothesis testing*.
 
 ---
 class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
-- Linear regression
-- Sample size
+- Linear regression: estimate the effect of a predictor on an outcome. 
+- Increasing sample size helps to estimate precisely. 
 
 <!---- Biology -------->
 
@@ -173,7 +206,7 @@ or: what is *-omics*?
 ---
 class: left, middle
 
-## DNA as the blueprint of life
+## DNA is the blueprint of human life
 
 - we are originally just one cell with dna from mum and dna from dad
 
@@ -351,26 +384,56 @@ class: inverse, center, middle
 
 # Results
 
----
-class: left, middle
-# Evaluation of SSIMP
-
-<img src="img/rueeger-etal-2018-fp.pdf" width="400">
 
 ---
 class: left, middle
+# Output
 
-## Two goals
 
-1) Compare summary statistic imputation to genotype imputation
+1. `r icon::fa_arrow_right()` Evaluation and application of summary statistic imputation `r icon::fa_arrow_left()`
+    - <small>*Evaluation and application of summary statistic imputation to discover new height- associated loci*  (Rüeger, McDaid, and Kutalik 2018)</small>
 
-(2) Test the utility of summary statistic imputation on a real case on human height.
+1. Improving summary statistic imputation for mixed populations
+    - <small>*Improved imputation of summary statistics for mixed populations*  (Rüeger, McDaid, and Kutalik 2017, not peer-reviewed)</small>
+
+1. Applications of summary statistic imputation
+    - <small>*Rare and low-frequency coding variants alter human adult height* (Marouli et al. 2017)</small>
+    - <small>*Bayesian association scan reveals loci associated with human lifespan and linked biomarkers* (McDaid et al. 2017)/small>
+
+1. Contributions to research in infectious diseases
+    - <small>*Impact of com- mon risk factors of fibrosis progression in chronic hepatitis C* (Rüeger et al. 2015)</small>
+    - <small>*A systematic review and meta-analysis of HCV clearance* (Gauthiez et al. 2017)</small>
+    - <small>*IL1B and DEFB1 polymorphisms increase susceptibility to inva- sive mold infection after solid-organ transplantation* (Wójtowicz et al. 2015)</small>
+    - <small>*PTX3 Polymorphisms and Invasive Mold Infections after Solid Organ Transplant* (Wójtowicz et al. 2015)</small>
+
+1. Minor contributions to other publications
+
+---
+class: left, middle
+# Evaluation and application of summary statistic imputation (SSIMP)
+
+<img src="img/rueeger-etal-2018-fp.pdf" width="600">
+
+---
+class: left, middle
+
+## Goals
+
+1. Improve imputation quality & investigate parameters of SSIMP.
+
+1. Compare summary statistic imputation to genotype imputation.
+
+1. Test the utility of summary statistic imputation on a real case on human height data.
 
 
 ---
 class: left, middle
 
-## Blind resutls!
+## How to test new methods?
+
+- 🙈 
+
+- Blind resutls!
 
 ---
 class: left, middle

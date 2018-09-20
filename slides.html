@@ -35,6 +35,17 @@ class: inverse, left, middle
 
 # Outline
 
+- Introduction
+
+- Results
+
+- Discussion 
+
+---
+class: inverse, left, middle
+
+# Outline
+
 - Introduction (= explaining the title)
 
 - Results (= what I did during the PhD)
@@ -48,6 +59,13 @@ class: inverse, center, middle
 
 # Introduction
 
+---
+class: center, middle
+
+## The goal to keep in mind: Cornerstones of Medicine
+
+&lt;img src="img/cornerstones.png" width="400"&gt;
+
 
 &lt;!---- Data analysis --------&gt;
 ---
@@ -58,67 +76,83 @@ class: center, middle
 ---
 class: left, middle
 
-### Example: Distribution of human height
+### Summarise data
+
+#### Example: Distribution of human height in 100 individuals
 
 ![](slides_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
 
-.footnote[From https://en.wikipedia.org/wiki/List_of_average_human_height_worldwide#cite_note-Staub-134. ]
 
 
 ---
 class: left, middle
 
-### Example: Distribution of human height
+### Summarise data
+
+#### Example: Distribution of human height in 100 individuals
 
 ![](slides_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
 
-.footnote[From https://en.wikipedia.org/wiki/List_of_average_human_height_worldwide#cite_note-Staub-134. ]
 
 ---
 class: left, middle
 
-### Example: Distribution of human height over time
+### Identify relationships between A and B
 
-&lt;!--- &lt;img src="img/age-ldl.png" width="400"&gt; --------&gt;
+#### Example: Relationship between age, sex and LDL (low-density lipoprotein)
 
-.small[Age vs. LDL ]
+.small[From: Freedman et al. (2004)]
 
-.footnote[From .... ]
+&lt;img src="img/age_LDL.png" width="200"&gt; &lt;!----- &lt;img src="img/age_HDL.png" width="200"&gt; -------&gt;
+
+
+
+---
+class: left, middle
+
+### Identifying patterns
+
+#### Example: Genes mirror geography within Europe
+
+&lt;img src="img/european-map.png" width="300"&gt;
+
+.small[From: Novembre et al. (2008)]
 
 
 ---
 class: left, middle
 
-### Example: Patterns
+### Medical scores to assess patients
 
-&lt;!--------- &lt;img src="europeans.png" width="400"&gt; ------------&gt;
+#### Example: APGAR score
 
-.small[Europeans. ]
+Test done in newborns 1-5 minutes after birth. 
 
-.footnote[From .... ]
+1. Skin color
+2. Pulse rate
+3. Reflex
+4. Activity
+5. Respiratory
 
----
-class: left, middle
+&lt;img src="img/title-apgar.png" width="400"&gt;
 
-## What is the purpose of data analysis?
+.small[From: Apgar (1953)]
 
-1. <i class="fas  fa-caret-down "></i> Distill knowledge from data: *Average height in Swiss women in 2017.*
-
-1. <i class="fas  fa-chart-line "></i> quantify relationships: *Evolution of human height over time, relationship between height and ..* 
-
-1. Statistical methods / tools help us to understand the world (= complex systems) we life in 
-
-1. How it works: have a question, collect data, answer the question, limited to the data. 
 
 ---
 class: left, middle
 
-## Other examples of data analysis usage
+## What is the purpose of statistical methods? <i class="fas  fa-chart-line "></i>
 
-- e.g. prediction of temperature rise
-- score for born baby (Apgar score)
-- e.g. score for disease: diagnosis
+1. By summarising data we can <i class="fas  fa-caret-down "></i> distill knowledge.
 
+1. Helps us to understand the world and the complex systems we life in.
+
+1. How data analysis works: 
+    - have a problem
+    - define a question
+    - collect data
+    - answer the question (limited to the data used)
 
 
 ---
@@ -126,21 +160,21 @@ class: left, middle
 
 ## Central principles of data analysis
 
-- Data that we have is often time a proxy for something we would like to measure, but cannot (*for example: we use BMI as a proxy for obesity*)
+- Data represents oftentimes an **approximation** for something we cannot measure <i class="fas  fa-arrow-right "></i> *Use of BMI as a proxy for obesity*.
 
-- The more data we have, the *more precise* we can quantify something (= sqrt(N) correlates with standard error)
+- The more data records we have, the **more precise** we can quantify something  <i class="fas  fa-arrow-right "></i> *Relationship between sample size and the standard error*.
 
-- Some things are more difficult to measure than other things
-  - a relationship between X and Y is easier to quantify than showing that X is causing Y: * Correlation != Cause*.
-  - it is impossible to *prove* something, but we can give evidence that something is more likely: *= Hypothesis testing*.
+- Some questions are harder to answer than others: 
+  - a **relationship between X and Y** is easier to quantify than showing that X is causing Y <i class="fas  fa-arrow-right "></i> * Correlation ≠ Causation*.
+  - it is **impossible to prove** something, but we can give evidence that something is more likely <i class="fas  fa-arrow-right "></i> *aka. Hypothesis testing*.
 
 ---
 class: left, middle
 
 ## Keep in mind <i class="fas  fa-hand-pointer "></i>
 
-- Linear regression
-- Sample size
+- Linear regression: estimate the effect of a predictor on an outcome. 
+- Increasing sample size helps to estimate precisely. 
 
 &lt;!---- Biology --------&gt;
 
@@ -154,7 +188,7 @@ or: what is *-omics*?
 ---
 class: left, middle
 
-## DNA as the blueprint of life
+## DNA is the blueprint of human life
 
 - we are originally just one cell with dna from mum and dna from dad
 
@@ -309,6 +343,8 @@ class: left, middle
 &lt;img src="img/genome_imputation.pdf" width="400"&gt;
 
 
+Reference panel html
+
 
 &lt;!---- SSIMP --------&gt;
 ---
@@ -330,9 +366,71 @@ class: inverse, center, middle
 
 # Results
 
-&lt;!---- SSIMP - plosgen --------&gt;
 
-rueeger-etal-2018-fp.pdf
+---
+class: left, middle
+# Output
+
+
+1. <i class="fas  fa-arrow-right "></i> Evaluation and application of summary statistic imputation <i class="fas  fa-arrow-left "></i>
+    - &lt;small&gt;*Evaluation and application of summary statistic imputation to discover new height- associated loci*  (Rüeger, McDaid, and Kutalik 2018)&lt;/small&gt;
+
+1. Improving summary statistic imputation for mixed populations
+    - &lt;small&gt;*Improved imputation of summary statistics for mixed populations*  (Rüeger, McDaid, and Kutalik 2017, not peer-reviewed)&lt;/small&gt;
+
+1. Applications of summary statistic imputation
+    - &lt;small&gt;*Rare and low-frequency coding variants alter human adult height* (Marouli et al. 2017)&lt;/small&gt;
+    - &lt;small&gt;*Bayesian association scan reveals loci associated with human lifespan and linked biomarkers* (McDaid et al. 2017)/small&gt;
+
+1. Contributions to research in infectious diseases
+    - &lt;small&gt;*Impact of com- mon risk factors of fibrosis progression in chronic hepatitis C* (Rüeger et al. 2015)&lt;/small&gt;
+    - &lt;small&gt;*A systematic review and meta-analysis of HCV clearance* (Gauthiez et al. 2017)&lt;/small&gt;
+    - &lt;small&gt;*IL1B and DEFB1 polymorphisms increase susceptibility to inva- sive mold infection after solid-organ transplantation* (Wójtowicz et al. 2015)&lt;/small&gt;
+    - &lt;small&gt;*PTX3 Polymorphisms and Invasive Mold Infections after Solid Organ Transplant* (Wójtowicz et al. 2015)&lt;/small&gt;
+
+1. Minor contributions to other publications
+
+---
+class: left, middle
+# Evaluation and application of summary statistic imputation (SSIMP)
+
+&lt;img src="img/rueeger-etal-2018-fp.pdf" width="600"&gt;
+
+---
+class: left, middle
+
+## Goals
+
+1. Improve imputation quality &amp; investigate parameters of SSIMP.
+
+1. Compare summary statistic imputation to genotype imputation.
+
+1. Test the utility of summary statistic imputation on a real case on human height data.
+
+
+---
+class: left, middle
+
+# 🙈 B
+
+- lind resutls!
+
+---
+class: left, middle
+
+## 1) 
+F1
+F4/F5
+
+---
+class: left, middle
+
+## 2) 
+F2
+Fig8
+S6_Fig
+S8_Fig
+
 
 &lt;!---------------- DISCUSSION ---------------&gt;
 
@@ -341,16 +439,6 @@ class: inverse, center, middle
 
 # Discussion
 
----
-class: left, middle
-
-## My contribution
-
-With my work on summary statistic imputation I have helped to im- prove linking incomplete GWAS summary statistics with follow-up methods.
-
-- SSIMP: Bridging GWAS summary statistics with follow up methods
-- Improving SSIMP (improved imputation quality and optimised assembly of the LD matrix)
-- Quantified how well SSIMP works (compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the util- ity of summary statistic imputation). 
 
 
 ---
@@ -358,9 +446,11 @@ class: left, middle
 
 ## What needs to be improved for SSIMP
 
-- LD matrix estimation
-- how to incorporate SSIMP into cohort pipeline
-- maintaining software
+To impute summary statistics the following is needed
+- large and diverse reference panels &gt;&gt; improvement of LD matrix estimation.
+- software/tools &gt;&gt; easy to use and maintained
+- publicly available GWAS data &gt;&gt; the input of SSIMP
+- figure out how to incorporate SSIMP into cohort pipeline
 
 
 ---
@@ -375,6 +465,18 @@ Foundation of SSIMP
 - Mutliethnic GWASs
 - Public data: 
 - Large &amp; diverse reference panels
+
+
+---
+class: left, middle
+
+## My contribution
+
+With my work on summary statistic imputation I have helped to improve linking incomplete GWAS summary statistics with follow-up methods.
+
+- SSIMP: Bridging incomplete GWAS summary statistics with follow up methods (For example: Multi-trait analyses (genetic correlation, pleiotropy))
+- Improving SSIMP (improved imputation quality and optimised assembly of the LD matrix)
+- Quantified how well SSIMP works (compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the util- ity of summary statistic imputation).
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>

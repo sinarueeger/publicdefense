@@ -228,7 +228,7 @@ class: left, middle
 
 - RNA, ... 
 
-<img src="img/cascade.pdf" width="400">
+<img src="img/cascade.png" width="400">
 
 - basket of environment
 
@@ -242,7 +242,7 @@ class: left, middle
 
 - knowing risk per person to develop a disease
 
-<img src="img/gwas_rationale.pdf" width="400">
+<img src="img/gwas_rationale.png" width="400">
 
 
 
@@ -251,7 +251,7 @@ class: left, middle
 
 ## How is DNA measures?
 
-<img src="img/genome.pdf" width="400">
+<img src="img/genome.png" width="400">
 
 
 
@@ -306,7 +306,7 @@ ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(ae
 class: left, middle
 
 ## Relationship between a genotype and trait/disease
-<img src="img/gwas-a.pdf" width="600">
+<img src="img/gwas-a.png" width="600">
 
 
 ---
@@ -328,7 +328,7 @@ class: left, middle
 
 ## Large sample sizes needed
 
-<img src="img/maf_effectsize.pdf" width="400">
+<img src="img/maf_effectsize.png" width="400">
 
 
 
@@ -373,7 +373,7 @@ class: left, middle
 
 ## How to infer data that is missing?
 
-<img src="img/map-arosa.pdf" width="650">
+<img src="img/map-arosa.png" width="650">
 
 
 ---
@@ -381,7 +381,7 @@ class: left, middle
 
 ## How to infer data that is missing?
 
-<img src="img/map-arosa-plain.pdf" width="650">
+<img src="img/map-arosa-plain.png" width="650">
 
 ---
 class: left, middle
@@ -389,7 +389,7 @@ class: left, middle
 ## Basic principle
 
 
-<img src="img/genome_imputation.pdf" width="600">
+<img src="img/genome_imputation.png" width="600">
 
 
 ---
@@ -479,7 +479,7 @@ class: left, middle
 ---
 class: left, middle
 
-<img src="img/rueeger-etal-2018-fp.pdf" width="800">
+<img src="img/rueeger-etal-2018-fp.png" width="800">
 
 ---
 class: left, middle
@@ -521,12 +521,12 @@ class: left, middle
 ---
 class: left, middle
 
-<img src="img/results-ukbb-associated.pdf" width="800">
+<img src="img/results-ukbb-associated.png" width="800">
 
 ---
 class: left, middle
 
-<img src="img/results-ukbb-null.pdf" width="800">
+<img src="img/results-ukbb-null.png" width="800">
 
 
 ---
@@ -552,7 +552,7 @@ class: left, middle
 
 ## Comparing imputation results to exome results
 
-<img src="img/results-exome-hits.pdf" width="800">
+<img src="img/results-exome-hits.png" width="800">
 
 
 <!---------------- DISCUSSION --------------->

@@ -264,7 +264,7 @@ class: left, middle
 ---
 class: left, middle
 
-## How is DNA measured
+## How DNA is measured
 
 <img src="img/genome.png" width="700">
 

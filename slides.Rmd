@@ -64,7 +64,7 @@ class: inverse, center, middle
 ---
 class: center, middle
 
-## The goal to keep in mind: Cornerstones of Medicine
+## The goals to keep in mind: *Cornerstones of Medicine*
 
 <img src="img/cornerstones.png" width="400">
 
@@ -167,7 +167,7 @@ class: left, middle
 1. Helps us to understand the world and the complex systems we life in.
 
 1. How data analysis works: 
-    - have a problem
+    - identify a problem
     - define a question
     - collect data
     - answer the question (limited to the data used)
@@ -180,18 +180,19 @@ class: left, middle
 
 - Data represents oftentimes an **approximation** for something we cannot measure `r icon::fa_arrow_right()` *Use of BMI as a proxy for obesity*.
 
-- The more data records we have, the **more precise** we can quantify something  `r icon::fa_arrow_right()` *Relationship between sample size and the standard error*.
+- The more data records we have, the **more precise** the estimation (of interest) `r icon::fa_arrow_right()` *Relationship between sample size and the standard error*.
 
 - Some questions are harder to answer than others: 
   - a **relationship between X and Y** is easier to quantify than showing that X is causing Y `r icon::fa_arrow_right()` * Correlation ≠ Causation*.
-  - it is **impossible to prove** something, but we can give evidence that something is more likely `r icon::fa_arrow_right()` *aka. Hypothesis testing*.
+  - it is **impossible to prove** a hypothesis, but we can reject a hypothesis `r icon::fa_arrow_right()` *aka hypothesis testing*.
 
 ---
 class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
-- Linear regression: estimate the effect of a predictor on an outcome. 
+- Statistical methods: summarise data & quantify relationships.
+
 - Increasing sample size helps to estimate precisely. 
 
 <!---- Biology -------->
@@ -273,19 +274,46 @@ class: center, middle
 ---
 class: left, middle
 
-## Relationship between DNA and trait/disease
+## Relationship between a genotype and trait/disease
 
-> Illustration
+```{r, fig.width = 6, fig.height = 6, dev="pdf"}
+
+set.seed(3)
+gt.0 <- 100
+gt.1 <- 100
+gt.2 <- 100
+A <- 50 ##intercept
+B <- 2  ## slope
+dat <- data.frame(genotype = c(rep(0, gt.0), rep(1, gt.1), rep(2, gt.2)))
+dat$disease <- A + dat$genotype * B + rnorm(nrow(dat))
+
+ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(aes(x = genotype, y = disease, group = genotype))
+
+```
 
 ---
 class: left, middle
 
-## Relationship between DNA and trait/disease
+## Relationship between a genotype and trait/disease
 
-> Illustration of 1 SNP
+```{r, fig.width = 6, fig.height = 6, dev="pdf"}
 
-> Manhatten plot
+ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(aes(x = genotype, y = disease, group = genotype)) + geom_abline(aes(intercept = A, slope = B), color = I("red"))
 
+```
+
+---
+class: left, middle
+
+## Relationship between a genotype and trait/disease
+<img src="img/gwas-a.pdf" width="600">
+
+
+---
+class: left, middle
+
+## Relationship between MANY genotypes and trait/disease
+<img src="img/gwas-b.png" width="600">
 
 ---
 class: left, middle
@@ -308,16 +336,13 @@ class: left, middle
 
 - Solution \#2: Build consortium
 
+
 ---
 class: left, middle
 
-## How GWASs work 
+## GWAS summary statistics
 
-- Large sample sizes needed > consortium
-
-- Meta analsysis
-
-- Make results public
+<img src="img/gwas-ss.png" width="400">
 
 ---
 class: left, middle
@@ -331,9 +356,9 @@ class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
-- Large sample sizes required: consortium!
+- Large sample sizes needed: consortium!
 
-- Recycling GWAS summary stats for other methods
+- Recycling GWAS summary statistics with other methods. 
 
 
 
@@ -346,11 +371,17 @@ class: center, middle
 ---
 class: left, middle
 
-## Analogy
+## How to infer data that is missing?
 
-- How to infer data that is missing
+<img src="img/map-arosa.pdf" width="650">
 
-- Analogy: Hiking Map
+
+---
+class: left, middle
+
+## How to infer data that is missing?
+
+<img src="img/map-arosa-plain.pdf" width="650">
 
 ---
 class: left, middle
@@ -358,10 +389,15 @@ class: left, middle
 ## Basic principle
 
 
-<img src="img/genome_imputation.pdf" width="400">
+<img src="img/genome_imputation.pdf" width="600">
 
 
-Reference panel html
+---
+class: left, middle
+
+## Public reference panel
+
+<img src="img/map-1000genomes-populations.png" width="600">
 
 
 <!---- SSIMP -------->
@@ -373,9 +409,43 @@ class: center, middle
 ---
 class: left, middle
 
-## How SSimp works
+## GWAS
 
-<img src="img/summarystats_comic.pdf" width="400">
+<img src="img/ssimp-a.png" width="700">
+
+---
+class: left, middle
+## Untyped variant
+
+<img src="img/ssimp-b.png" width="700">
+
+---
+class: left, middle
+
+## Genotype imputation
+
+<img src="img/ssimp-c.png" width="700">
+
+---
+class: left, middle
+
+## Genotype imputation
+
+<img src="img/ssimp-d.png" width="700">
+
+---
+class: left, middle
+
+## Summary statistic imputation
+
+<img src="img/ssimp-e.png" width="700">
+
+---
+class: left, middle
+
+## Main equation
+
+<img src="img/ssimp-equation.png" width="700">
 
 
 <!---------------- RESULTS --------------->
@@ -398,26 +468,23 @@ class: left, middle
 
 1. Applications of summary statistic imputation
     - <small>*Rare and low-frequency coding variants alter human adult height* (Marouli et al. 2017)</small>
-    - <small>*Bayesian association scan reveals loci associated with human lifespan and linked biomarkers* (McDaid et al. 2017)/small>
+    - <small>*Bayesian association scan reveals loci associated with human lifespan and linked biomarkers* (McDaid et al. 2017)</small>
 
 1. Contributions to research in infectious diseases
     - <small>*Impact of com- mon risk factors of fibrosis progression in chronic hepatitis C* (Rüeger et al. 2015)</small>
-    - <small>*A systematic review and meta-analysis of HCV clearance* (Gauthiez et al. 2017)</small>
-    - <small>*IL1B and DEFB1 polymorphisms increase susceptibility to inva- sive mold infection after solid-organ transplantation* (Wójtowicz et al. 2015)</small>
-    - <small>*PTX3 Polymorphisms and Invasive Mold Infections after Solid Organ Transplant* (Wójtowicz et al. 2015)</small>
+    - ...
 
 1. Minor contributions to other publications
 
 ---
 class: left, middle
-# Evaluation and application of summary statistic imputation (SSIMP)
 
-<img src="img/rueeger-etal-2018-fp.pdf" width="600">
+<img src="img/rueeger-etal-2018-fp.pdf" width="800">
 
 ---
 class: left, middle
 
-## Goals
+# Goals
 
 1. Improve imputation quality & investigate parameters of SSIMP.
 
@@ -429,27 +496,63 @@ class: left, middle
 ---
 class: left, middle
 
-## How to test new methods?
+# How to test new methods?
+--
 
-- 🙈 
+.pull-left[
+.big[`r emo::ji("see_no_evil")`]
+]
 
-- Blind resutls!
+.pull-right[
+1. Pretend to not have seen recent results for new set of markers (obtained through sequencing, genotyping or genotype imputation).  
+
+1. Apply SSIMP.
+
+1. Compare SSIMP-results to results by traditional methods. 
+]
 
 ---
 class: left, middle
 
-## 1) 
-F1
-F4/F5
+# 2. Compare SSIMP to genotype imputation
+
+<img src="img/results-ukbb-schema.png" width="600">
 
 ---
 class: left, middle
 
-## 2) 
-F2
-Fig8
-S6_Fig
-S8_Fig
+<img src="img/results-ukbb-associated.pdf" width="800">
+
+---
+class: left, middle
+
+<img src="img/results-ukbb-null.pdf" width="800">
+
+
+---
+class: left, middle
+
+# 3. Test SSIMP on height GWAS
+
+<img src="img/results-exome-schema.png" width="600">
+
+---
+class: left, middle
+
+
+## Locuszoom plot of results
+
+
+<img src="img/results-exome-locuszoom.png" width="500">
+
+
+---
+class: left, middle
+
+
+## Comparing imputation results to exome results
+
+<img src="img/results-exome-hits.pdf" width="800">
 
 
 <!---------------- DISCUSSION --------------->
@@ -464,37 +567,49 @@ class: inverse, center, middle
 ---
 class: left, middle
 
-## What needs to be improved for SSIMP
+## Outlook for SSIMP
 
-To impute summary statistics the following is needed
-- large and diverse reference panels >> improvement of LD matrix estimation.
-- software/tools >> easy to use and maintained
-- publicly available GWAS data >> the input of SSIMP
-- figure out how to incorporate SSIMP into cohort pipeline
+To impute summary statistics reliably the following is needed `r emo::ji("point_up")`
+
+```{r}
+icon.world <- purrr::map_chr(RColorBrewer::brewer.pal(5, "Set1"), ~icon::fa_globe(color = .))
+```
+
+### `r icon.world[1]` `r icon.world[2]` `r icon.world[3]` `r icon.world[4]` `r icon.world[5]` Large and diverse reference panels 
+
+- to improve of LD matrix estimation
+- to impute low-frequency variants 
+- to impute cosmopolitan/mutliethnic GWASs
+
+### `r icon::fa_wrench(color = "gray")` Software & tooling 
+
+- easy to use and maintained
+
+### `r icon::ii_ios_cloud_download()` Publicly available GWAS data  
+
+- the foundation of SSIMP
+
+
 
 
 ---
 class: left, middle
 
-## What is needed for GWASs
+## Conclusion `r icon::fa_pagelines(color = "green")`
 
-Foundation of SSIMP 
+With my work on summary statistic imputation I have helped to **link incomplete GWAS** summary statistics with **follow-up methods** (such as multi-trait analyses).
 
-- Quality of GWAS
-- More -omics data / deep phenotyinging
-- Mutliethnic GWASs
-- Public data: 
-- Large & diverse reference panels
 
+- **Improved SSIMP**: .small[improved imputation quality and optimised assembly of the LD matrix.]
+
+- Quantified **performance of SSIMP**: .small[compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the utility of summary statistic imputation.] 
 
 ---
-class: left, middle
+class: inverse, center, middle
 
-## My contribution
+.big[<font face="Yanone Kaffeesatz"> Thank you! </font>] <!------`r icon::fa_smile()` ---------->
 
-With my work on summary statistic imputation I have helped to improve linking incomplete GWAS summary statistics with follow-up methods.
+Slides: [https://sinarueeger.github.io/publicdefense/slides#1](https://sinarueeger.github.io/publicdefense/slides#1)
 
-- SSIMP: Bridging incomplete GWAS summary statistics with follow up methods (For example: Multi-trait analyses (genetic correlation, pleiotropy))
-- Improving SSIMP (improved imputation quality and optimised assembly of the LD matrix)
-- Quantified how well SSIMP works (compared to genotype imputation, identified groups of genetic variants that are hard to impute, and demonstrated in a case study the util- ity of summary statistic imputation). 
+Source code: [https://github.com/sinarueeger/publicdefense/](https://github.com/sinarueeger/publicdefense/)
 

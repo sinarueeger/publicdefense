@@ -521,9 +521,13 @@ icon.world <- purrr::map_chr(RColorBrewer::brewer.pal(5, "Set1"), ~icon::fa_glob
 - to impute low-frequency variants 
 - to impute cosmopolitan/multi-ethnic GWASs
 
+--
+
 ### `r icon::fa_wrench(color = "gray")` Software & tooling 
 
 - easy to use and maintained
+
+--
 
 ### `r icon::ii_ios_cloud_download()` Publicly available GWAS data  
 

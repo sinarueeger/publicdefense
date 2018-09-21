@@ -452,7 +452,6 @@ class: left, middle
 
 # Goals
 
-1. **Improve** imputation quality & investigate parameters of SSIMP.
 
 1. **Compare** summary statistic imputation to genotype imputation.
 

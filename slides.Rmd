@@ -106,11 +106,15 @@ class: left, middle
 set.seed(3)
 height <- rnorm(100, 164, sd = 8)
 av <- mean(height)
+sdv <- sd(height)
 dat <- data.frame(Height = height, y= 1)
-ggplot(data = NULL) + geom_point(aes(Height, y), data = dat, size = I(3), shape = 1) + ggtitle("Human height.") + geom_point(aes(x = av, y = 1), color = I("red"), size = I(3)) +  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) + geom_text(aes(x = av, y= 1.01, label = "Average"), color = I("red")) + ylim(c(0.95, 1.05))
+ggplot(data = NULL) + geom_point(aes(Height, y), data = dat, size = I(3), shape = 1) + ggtitle("Human height.") + geom_point(aes(x = av, y = 1), color = I("red"), size = I(3)) +  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) + geom_text(aes(x = av, y= 1.01, label = "Mean"), color = I("red")) + ylim(c(0.95, 1.05))
 
 ```
 
+- Mean: `r format(av, dig = 2)`
+
+- Standard deviation = `r format(sdv, dig = 2)`
 
 ---
 class: left, middle
@@ -124,10 +128,6 @@ class: left, middle
 <img src="img/age_LDL.png" width="200"> 
 
 
----
-class: left, middle
-
-## What is the purpose of statistical methods? `r icon::fa_chart_line()`
 
 ---
 class: left, middle
@@ -227,9 +227,9 @@ class: left, middle
 
 ## Keep in mind `r icon::fa_hand_pointer()`
 
-- We are only interested in the varying part of the genome `r icon::fa_arrow_right()` SNPs
+- We are only interested in the varying part of the genome `r icon::fa_arrow_right()` **SNPs**
 
-- Parts of the genome are correlated `r icon::fa_arrow_right()` LD
+- Parts of the genome are correlated `r icon::fa_arrow_right()` **LD**
 
 <!---- GWAS  -------->
 <!--- combine DA and biology -------->
@@ -267,7 +267,7 @@ class: left, middle
 
 ```{r, fig.width = 5, fig.height = 5}
 
-ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(aes(x = genotype, y = disease, group = genotype)) + geom_abline(aes(intercept = A, slope = B), size = I(3), color = I("green"))+ ylab("Quantitative Trait")
+ggplot(data = dat) + geom_point(aes(x = genotype, y = disease))+ geom_boxplot(aes(x = genotype, y = disease, group = genotype)) + geom_abline(aes(intercept = A, slope = B), size = I(3), color = I("#4daf4a"))+ ylab("Quantitative Trait")
 
 ```
 
@@ -312,7 +312,7 @@ class: left, middle
 
 ## Example: GWAS in MDD
 
-- Wray et al. (2018)
+- [Wray et al. (2018)](https://doi.org/10.1038/s41588-018-0090-3)
 
 - 44 novel loci associated with major depression disorder (MDD)
 
@@ -505,7 +505,7 @@ class: inverse, center, middle
 
 
 ---
-class: left, middle
+class: top, middle
 
 ## Outlook for SSIMP
 
